@@ -1,6 +1,5 @@
 celsium = int(input("Введите порог тривоги в градусах Цельсия:"))
 strings = int(input("Введите количество записей: "))
-print("Введите записи:")
 array_of_digrits = [input() for i in range(strings)]
 lenght_of_array = len(array_of_digrits)
 count_of_error = array_of_digrits.count("error")
