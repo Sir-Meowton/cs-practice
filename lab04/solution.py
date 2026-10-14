@@ -1,7 +1,8 @@
 def winner(names: list[str], scores:list[float]):
-    return scores.index(max(scores))
+    return names[scores.index(max(scores))]
 
 def average(scores: list[float]):
+    if len(scores) == 0: return 0
     return round(sum(scores) / len(scores), 2)
 
 def ranking(names: list[str], scores: list[float]):
