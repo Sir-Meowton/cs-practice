@@ -10,10 +10,8 @@ def block(matrix: list[list[float]], rows: list[int], columns: list[int]) -> lis
 
 def column_means(matrix: list[list[float]]) -> list[float]:
     arr = np.asarray(matrix)
-    return np.mean(arr, axis=0).tolist()
+    return np.nanmean(arr, axis=0).tolist()
 
 def column_range(matrix: list[list[float]], column: int) -> float:
     arr = np.asarray(matrix)
     return np.ptp(arr, axis=0).tolist()[column]
-
-print(reshape_rows([1, 2, 3], 1))
