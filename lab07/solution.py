@@ -1,6 +1,7 @@
 import numpy as np
 
 def reshape_rows(values: list[float], width: int) -> list[list[float]]:
+    if len(values) % width: return []
     arr = np.array(values)
     return arr.reshape(-1, width).tolist()
 
@@ -9,6 +10,8 @@ def block(matrix: list[list[float]], rows: list[int], columns: list[int]) -> lis
     return arr[np.ix_(rows, columns)].tolist()
 
 def column_means(matrix: list[list[float]]) -> list[float]:
+    if matrix == []:
+        return []
     arr = np.asarray(matrix)
     return np.nanmean(arr, axis=0).tolist()
 
