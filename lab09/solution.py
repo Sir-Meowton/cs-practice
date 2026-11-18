@@ -3,7 +3,7 @@ import numpy as np
 def make_hours() -> list[int]:
     return np.arange(0, 21+1, 3).tolist()
 
-def vector_report(values: list[int]) -> dict:
+def vector_report(values: list[float]) -> dict:
     dictionary = {
         "third": values[2],
         "last": values[-1],
@@ -16,8 +16,8 @@ def vector_report(values: list[int]) -> dict:
 
 def change_vector(values:list[float]) -> list[float]:
     arr = np.asarray(values.copy())
-    arr[1:4] = 99
-    arr[::2] = -1
+    arr[1:4] = 99.0
+    arr[::2] = -1.0
     return arr.tolist()
 
 def cap_above(values:list[float], limit:float) -> list[float]:
