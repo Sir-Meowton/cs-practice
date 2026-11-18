@@ -1,7 +1,7 @@
 import numpy as np
 
 def reshape_rows(values: list[float], width: int) -> list[list[float]]:
-    if len(values) % width: return []
+    if len(values) % width != 0: return []
     arr = np.array(values)
     return arr.reshape(-1, width).tolist()
 
