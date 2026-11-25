@@ -9,7 +9,7 @@ def rectangle(matrix:list[list[int]], row_start: int, row_stop: int, column_star
 def replace_rectangle(matrix: list[list[float]], row_start: int, row_stop: int, column_start: int, column_stop: int, value: float) -> list[list[float]]:
     matr = np.array(matrix).copy()
     matr[row_start:row_stop, column_start:column_stop] = value
-    return matrix.tolist()
+    return matr.tolist()
 
 def matrix_vector_product(matrix: list[list[float]], vector: list[float]) -> list[float]:
     return (np.array(matrix) @ np.array(vector)).tolist()
